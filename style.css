@@ -28,7 +28,7 @@
 
 .layer:nth-child(1) {
     background-image: url(img/layer-1.jpg);
-    transform: translateZ(-150px) scaleX(1.5) scaleY(1.2);
+    transform: translateZ(-150px) scaleX(1.5) scaleY(1.4);
 }
 
 .layer:nth-child(2) {
@@ -38,23 +38,46 @@
 
 .layer:nth-child(3) {
     background-image: url(img/layer-3.png);
-    transform: translateZ(-50px) scale(.8);
+    transform: translateZ(0px) scale(.8);
 }
 
 .layer:nth-child(4) {
     display: flex;
     justify-content: center;
     align-items: center;
+
+
+    transform: translateZ(100px);
+}
+
+.zagolovok {
+    position: relative;
+    top: 70px;
     text-align: center;
     color: #fff;
     font-family: 'Kablammo', cursive;
-    font-size: 50px;
+    font-size: 80px;
+    font-weight: normal;
     line-height: 1;
-
-    transform: translateZ(50px);
 }
 
 .layer:nth-child(5) {
     background-image: url(img/layer-5.png);
-    transform: translateZ(150px);
+    transform: translateZ(200px);
+}
+
+@media (max-width: 1000px) {
+    .zagolovok {
+        font-size: 50px;
+    }
+}
+
+.test {
+    width: 100px;
+    height: 100px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: transform 1.5s;
 }
