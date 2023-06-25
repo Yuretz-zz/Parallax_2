@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Oleo+Script+Swash+Caps&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parallax {
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.container {
+    height: 100vh;
+    transform-style: preserve-3d;
+    transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+
+    transition: transform 2s cubic-bezier(.05, .5, 0, 1);
+}
+
+.layer {
+    position: absolute;
+    inset: -50px;
+    background-size: cover;
+    background-position: center; 
+}
+
+.layer:nth-child(1) {
+    background-image: url(img/layer-1.jpg);
+    transform: translateZ(-150px) scaleX(1.5) scaleY(1.2);
+}
+
+.layer:nth-child(2) {
+    background-image: url(img/layer-2.png);
+    transform: translateZ(-100px) scale(1.2);
+}
+
+.layer:nth-child(3) {
+    background-image: url(img/layer-3.png);
+    transform: translateZ(-50px) scale(.8);
+}
+
+.layer:nth-child(4) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-family: 'Kablammo', cursive;
+    font-size: 50px;
+    line-height: 1;
+
+    transform: translateZ(50px);
+}
+
+.layer:nth-child(5) {
+    background-image: url(img/layer-5.png);
+    transform: translateZ(150px);
+}
